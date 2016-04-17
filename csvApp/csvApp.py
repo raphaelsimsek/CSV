@@ -73,7 +73,7 @@ class CSVApp:
                 #raise AssertionError('CSV dialect could not be detected!')
 
 if __name__ == '__main__':
-    csvClass = CSVApp('/Users/hackos/Documents/test.csv')
+    csvClass = CSVApp('../test.csv')
     # csvClass.getdialect()
     csvClass.csvreader()
     """
