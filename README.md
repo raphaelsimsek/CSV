@@ -1,9 +1,9 @@
-# CSV Tools Python
-## Assignment description (german)
-Erstellen Sie ein einfaches Beispiel anhand der Wiener Gemeinderatswahl:
--Einlesen eines CSV-Files (unterschiedlicher Dialekt) in den Hauptspeicher
--Einlesen eines CSV-Files (unterschiedlicher Dialekt) und an vorhandene Daten im Hauptspeicher anhängen
--Ausgeben von eingelesen Daten in ein CSV-File (unterschiedliche Dialekte)
-Viel Erfolg!
+# CSV Task08 Python
+## Assignment description (direct translation german to english) ##
+Execute these simple tasks for the Viennese communal election:
+*  Read a CSV-file (different dialects) into system memory
+*  Read a different CSV-file (different dialects) and add its data to the current system memory data
+*  Output the read-out data in a CSV-file (different dialects)
+Good Luck
 
-## Running the application
+## Running the application ##
