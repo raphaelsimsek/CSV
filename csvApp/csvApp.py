@@ -1,25 +1,32 @@
 import csv
 
 
-class csvReader:
+class csvApp:
     """
-    Class which reads a CSV file, according to documentation
+    Class which reads and writes to a CSV file, according to thedocumentation
     """
+
     def __init__(self, file):
-        self.file=file
+        self.file = file
+        self.data = []
 
-    def schreiberling(self):
-        with open(self.file, 'w') as writ:
-            spamwriter = csv.writer(writ, delimiter=';')
-            spamwriter.writerow(['A', 'B'])
-
-    def leseratte(self):
+    def csvReader(self):
         with open(self.file, 'r') as csvfile:
-            spamreader = csv.reader(csvfile, delimiter=';', quotechar='|')
+            reader = csv.reader(csvfile, delimiter=';', quotechar='|')
+            self.data = list(reader)
+            print(self.data)
+            """
+            For not necessary, because of output as array
             for row in spamreader:
-                print(','.join(row))
+                self.data = self.data.append(row)
+            """
+
+    def csvWriter(self):
+        with open(self.file, 'w') as writ:
+            writer = csv.writer(writ, delimiter=';')
+            writer.writerows(self.data)
 
 if __name__ == '__main__':
-    cr = csvReader('/Users/hackos/Documents/test.csv')
-    cr.schreiberling()
-    cr.leseratte()
+    csvClass = csvApp('/Users/hackos/Documents/test.csv')
+    csvClass.csvReader()
+    csvClass.csvWriter()
