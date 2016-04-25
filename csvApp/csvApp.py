@@ -4,7 +4,7 @@ import time
 __author__ = "Raphael Simsek"
 __maintainer__ = "Raphael Simsek"
 __email__ = "raphael@simsek.me"
-__status__ = "Work in Progress"
+__status__ = "Deployed"
 
 
 class CSVApp:
@@ -20,7 +20,10 @@ class CSVApp:
         :param file: CSV file, which is given at initialization to read and write to
         :return: None
         """
-        self.file = file
+        if file is None:
+            raise IOError('No CSV file was given')
+        else:
+            self.file=file
         self.data = []
         self.dialect = None
         self.wAdd = True
