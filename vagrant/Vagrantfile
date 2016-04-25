@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
   # Makes the entire CSV-Tools directory available as is
-  config.vm.synced_folder "~/Work/School", "/home/vagrant/School"
+  config.vm.synced_folder "/Users/hackos/Work/School", "/home/vagrant/School"
 
   # Install project dependicies
   config.vm.provision :shell, :path => "./install.sh"
