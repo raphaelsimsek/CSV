@@ -10,6 +10,8 @@ __status__ = "Work in Progress"
 class CSVApp:
     """
     Class which reads and writes to a CSV file, according to pythons csv package documentation
+    Had loads of nasty issues because of forgetting about file.close(),
+    will surely not make the same mistake again.
     """
 
     def __init__(self, file):
