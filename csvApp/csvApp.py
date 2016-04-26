@@ -7,7 +7,7 @@ __email__ = "raphael@simsek.me"
 __status__ = "Deployed"
 
 
-class CSVApp:
+class CSVApplication:
     """
     Class which reads and writes to a CSV file, according to pythons csv package documentation
     Had loads of nasty issues because of forgetting about file.close(),
@@ -118,7 +118,7 @@ if __name__ == '__main__':
     """
     Main Method calling all the needed methods
     """
-    csvClass = CSVApp('../test.csv')
+    csvClass = CSVApplication('../test.csv')
     # csvClass.getdialect()
     csvClass.csvreader()
     #time.sleep(5)
