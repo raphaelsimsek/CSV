@@ -25,6 +25,7 @@ class CSVApp:
         else:
             self.file=file
         self.data = []
+        self.header = False
         self.dialect = None
         self.wAdd = True
         self.w = True
@@ -97,9 +98,16 @@ class CSVApp:
             try:
                 # Get dialect off of sniffer (using the given 1 char strings)
                 self.dialect = csv.Sniffer().sniff(csvfile.read(1024), ['\t', ';', ',', ' ', ':', '|'])
-                print('CSV dialect was detected!')
-                # Seek to beginning of file for further reading or writing
                 csvfile.seek(0)
+                print('CSV dialect was detected!')
+                self.header = csv.Sniffer().has_header(csvfile.read(2048))
+                csvfile.seek(0)
+                if self.header:
+                    print('A header was found in the CSV file!')
+                else:
+                    print('No header was found in the CSV file!')
+                # Seek to beginning of file for further reading or writing
+
                 return self.dialect
             except:
                 self.dialect = None
