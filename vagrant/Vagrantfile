@@ -7,7 +7,7 @@ end
 Vagrant.configure("2") do |config|
   
   # Configures how much memory goes to the machine
-  # This can be adjusted by editing the 2024 to a different value (more than 512)
+  # This can be adjusted by editing the 1024 to a different value (more than 512)
   config.vm.provider "virtualbox" do |v|
     v.customize ["modifyvm", :id, "--memory", "1024"]
   end
